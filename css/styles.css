@@ -24,16 +24,38 @@ body {
 
 ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /**Лого**/
 
 .logo {
+    display: inline-block;
     color: #000000;
     font-family: Raleway, sans-serif;
     font-weight: 700;
     font-size: 26px;
     line-height: 1.2;
     text-decoration: none;
+    margin-top: 24px;
+    margin-bottom: 25px;
 }
 
 .logo:hover,
@@ -43,11 +65,14 @@ ul {
 
 footer .logo {
     color: var(--accent-white-color);
+    margin-top: 60px;
+    margin-bottom: 20px;
 }
 
 /**Меню**/
 
 .link {
+    display: inline-block;
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
@@ -56,6 +81,8 @@ footer .logo {
 
 .site-nav .link {
     color: var(--title-text-color);
+    margin-top: 32px;
+    margin-bottom: 32px;
 }
 
 .site-nav .link.current,
@@ -67,6 +94,8 @@ footer .logo {
 /**Контакты**/
 .contact .link {
     color: var(--primary-text-color);
+    margin-bottom: 32px;
+    margin-top: 32px;
 }
 .contact .link:hover,
 .contact .link:focus {
@@ -82,6 +111,11 @@ address {
     color: var(--accent-white-color);
 }
 
+address .contact .link {
+    margin-bottom: 9px;
+    margin-top: 0;
+}
+
 /**Hero**/
 .hero {
     color: var(--accent-white-color);
@@ -92,10 +126,19 @@ address {
     letter-spacing: 0.06em;
     text-align: center;
     text-transform: uppercase;
+    padding: 200px 0;
+}
+.hero h1 {
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /**Button**/
 .button {
+    display: inline-block;
+    min-width: 200px;
+    border: none;
     background-color: var(--accent-color);
     color: var(--accent-white-color);
     font-family: inherit;
@@ -106,6 +149,8 @@ address {
     text-align: center;
     letter-spacing: 0.06em;
     cursor: pointer;
+    border-radius: 4px;
+    padding: 10px 32px;
 }
 
 .button.primary,
@@ -125,6 +170,7 @@ address {
 
 footer {
     background-color: var(--footer-bg);
+    padding-bottom: 51px;
 }
 
 /**Section**/
@@ -141,9 +187,37 @@ footer {
     font-weight: 700;
     line-height: 1.14;
     text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.container.benefits {
+    padding-top: 94px;
+    padding-bottom: 94px;
 }
 
 /**Секция наша команда**/
+h2 {
+    margin-bottom: 50px;
+}
+
+.container.work {
+    padding-bottom: 94px;
+}
+
+.container.our-team {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+.card {
+    width: 270px;
+    min-height: 368px;
+    background: #ffffff;
+    /* material shadow v1 */
+    text-align: center;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    padding-bottom: 30px;
+}
 
 .our-team {
     font-size: 16px;
@@ -153,6 +227,10 @@ footer {
 .our-team h3 {
     color: var(--title-text-color);
     font-weight: 500;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-bottom: 10px;
+    margin-right: auto;
 }
 
 /**Portfolio**/
@@ -168,4 +246,5 @@ footer {
     color: var(--primary-text-color);
     font-size: 16px;
     line-height: 1.87;
+    text-align: center;
 }
