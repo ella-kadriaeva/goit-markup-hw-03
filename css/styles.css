@@ -18,6 +18,19 @@ body {
     line-height: 1.71;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 .page-header {
     background-color: var(--header-bg);
 }
@@ -47,15 +60,15 @@ p {
 /**Лого**/
 
 .logo {
-    display: inline-block;
+    display: block;
     color: #000000;
     font-family: Raleway, sans-serif;
     font-weight: 700;
     font-size: 26px;
     line-height: 1.2;
     text-decoration: none;
-    margin-top: 24px;
-    margin-bottom: 25px;
+    padding-top: 24px;
+    padding-bottom: 25px;
 }
 
 .logo:hover,
@@ -65,24 +78,49 @@ p {
 
 footer .logo {
     color: var(--accent-white-color);
-    margin-top: 60px;
+    padding-top: 60px;
+    padding-bottom: 0;
     margin-bottom: 20px;
 }
 
 /**Меню**/
+.main-nav {
+    display: flex;
+}
 
 .link {
-    display: inline-block;
+    display: block;
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
     text-decoration: none;
 }
 
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.site-nav {
+    display: flex;
+    margin-left: 93px;
+}
+
 .site-nav .link {
     color: var(--title-text-color);
-    margin-top: 32px;
-    margin-bottom: 32px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.nav-item {
+    margin-right: 50px;
+}
+.nav-item:last-child {
+    margin-right: 0;
+}
+
+.site-nav {
+    margin-right: 93px;
 }
 
 .site-nav .link.current,
@@ -92,30 +130,46 @@ footer .logo {
 }
 
 /**Контакты**/
-.contact .link {
+
+.contact.nav {
+    display: flex;
+    margin-left: auto;
+}
+
+.contact.nav .link {
+    display: block;
     color: var(--primary-text-color);
-    margin-bottom: 32px;
-    margin-top: 32px;
+    padding-bottom: 32px;
+    padding-top: 32px;
+}
+
+.contact .item + .item,
+.benefits .item + .item {
+    margin-left: 50px;
 }
 .contact .link:hover,
 .contact .link:focus {
     color: var(--accent-color);
 }
 
-address {
-    color: var(--address-color);
+address .link.address {
+    color: var(--accent-white-color);
     font-style: normal;
 }
 
-.link.address {
-    color: var(--accent-white-color);
-}
-
-address .contact .link {
+address .contact-item.list {
     margin-bottom: 9px;
     margin-top: 0;
+    font-style: normal;
 }
 
+address .contact-item.list:last-child {
+    margin-bottom: 0;
+}
+
+.link.contact {
+    color: var(--address-color);
+}
 /**Hero**/
 .hero {
     color: var(--accent-white-color);
@@ -170,7 +224,7 @@ address .contact .link {
 
 footer {
     background-color: var(--footer-bg);
-    padding-bottom: 51px;
+    padding-bottom: 60px;
 }
 
 /**Section**/
@@ -182,6 +236,17 @@ footer {
 }
 
 /**Преимущества нашей компании**/
+
+.benefits {
+    display: flex;
+}
+
+.benefits .item {
+    width: 270px;
+}
+.benefits .item + .item {
+    margin-left: 30px;
+}
 .benefits-title {
     color: var(--title-text-color);
     font-weight: 700;
@@ -194,6 +259,14 @@ footer {
     padding-bottom: 94px;
 }
 
+.works {
+    display: flex;
+}
+
+.works .item + .item {
+    margin-left: 30px;
+}
+
 /**Секция наша команда**/
 h2 {
     margin-bottom: 50px;
@@ -203,13 +276,18 @@ h2 {
     padding-bottom: 94px;
 }
 
+.section.our-team {
+    background-color: var(--button-bg);
+}
+
 .container.our-team {
     padding-top: 94px;
     padding-bottom: 94px;
 }
 .card {
+    margin-right: 30px;
     width: 270px;
-    min-height: 368px;
+    height: 368px;
     background: #ffffff;
     /* material shadow v1 */
     text-align: center;
@@ -219,7 +297,12 @@ h2 {
     padding-bottom: 30px;
 }
 
-.our-team {
+.card:last-child {
+    margin-right: 0;
+}
+
+.our-team ul {
+    display: flex;
     font-size: 16px;
     line-height: 1.9;
 }
@@ -228,9 +311,8 @@ h2 {
     color: var(--title-text-color);
     font-weight: 500;
     margin-top: 30px;
-    margin-left: auto;
+
     margin-bottom: 10px;
-    margin-right: auto;
 }
 
 /**Portfolio**/
