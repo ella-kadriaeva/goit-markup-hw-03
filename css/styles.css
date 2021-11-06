@@ -9,14 +9,7 @@
     --header-bg: #ffffff;
 }
 
-body {
-    background: var(--accent-white-color);
-    color: var(--primary-text-color);
-    font-family: Roboto, sans-serif;
-    letter-spacing: 0.03em;
-    font-size: 14px;
-    line-height: 1.71;
-}
+/*-----------Утилиты---------*/
 
 .visually-hidden {
     position: absolute;
@@ -29,10 +22,6 @@ body {
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
-}
-
-.page-header {
-    background-color: var(--header-bg);
 }
 
 ul {
@@ -49,7 +38,19 @@ p {
     padding: 0;
 }
 
-.container {
+/*---------Общие-------------*/
+
+body {
+    background: var(--accent-white-color);
+    color: var(--primary-text-color);
+    font-family: Roboto, sans-serif;
+    letter-spacing: 0.03em;
+    font-size: 14px;
+    line-height: 1.71;
+}
+
+.page-header {
+    background-color: var(--header-bg);
     width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
@@ -57,7 +58,37 @@ p {
     margin-right: auto;
 }
 
-/**Лого**/
+.container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+.footer-section {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 60px;
+    padding-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer {
+    background-color: var(--footer-bg);
+}
+
+.section-title {
+    color: var(--title-text-color);
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+}
+
+/**-----------Лого---------------**/
 
 .logo {
     display: inline-block;
@@ -78,12 +109,11 @@ p {
 
 footer .logo {
     color: var(--accent-white-color);
-    padding-top: 60px;
     padding-bottom: 0;
     margin-bottom: 20px;
 }
 
-/**Меню**/
+/**------------------Меню----------------**/
 .main-nav {
     display: flex;
 }
@@ -129,7 +159,7 @@ nav {
     color: var(--accent-color);
 }
 
-/**Контакты**/
+/**-----------Контакты--------------------**/
 
 .contact.nav {
     display: flex;
@@ -170,7 +200,7 @@ address .contact-item.list:last-child {
 .link.contact {
     color: var(--address-color);
 }
-/**Hero**/
+/**-------------------Hero------------------**/
 .hero {
     color: var(--accent-white-color);
     background-color: var(--footer-bg);
@@ -182,6 +212,7 @@ address .contact-item.list:last-child {
     text-transform: uppercase;
     padding: 200px 0;
 }
+
 .hero h1 {
     margin-bottom: 30px;
     margin-left: auto;
@@ -227,19 +258,6 @@ address .contact-item.list:last-child {
     display: flex;
 }
 
-footer {
-    background-color: var(--footer-bg);
-    padding-bottom: 60px;
-}
-
-/**Section**/
-.section-title {
-    color: var(--title-text-color);
-    font-size: 36px;
-    line-height: 1.17;
-    text-align: center;
-}
-
 /**Преимущества нашей компании**/
 
 .benefits {
@@ -259,9 +277,11 @@ footer {
     text-transform: uppercase;
     margin-bottom: 10px;
 }
-.container.benefits {
-    padding-top: 94px;
-    padding-bottom: 94px;
+
+/*--------Секция Чем мы занимаемся------*/
+
+.container.work {
+    padding-top: 0;
 }
 
 .works {
@@ -277,18 +297,10 @@ h2 {
     margin-bottom: 50px;
 }
 
-.container.work {
-    padding-bottom: 94px;
-}
-
-.our-team {
+.team {
     background-color: var(--button-bg);
 }
 
-.container.our-team {
-    padding-top: 94px;
-    padding-bottom: 94px;
-}
 .card {
     margin-right: 30px;
     width: 270px;
@@ -301,7 +313,7 @@ h2 {
     margin-right: 0;
 }
 
-.our-team ul {
+.our-team-list {
     display: flex;
     font-size: 16px;
     line-height: 1.9;
@@ -363,9 +375,4 @@ h2 {
 }
 .portfolio-item:nth-child(-n + 3) {
     margin-top: 0;
-}
-
-.container.main {
-    margin-bottom: 94px;
-    margin-top: 94px;
 }
