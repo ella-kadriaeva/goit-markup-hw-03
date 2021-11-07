@@ -206,16 +206,16 @@ address .contact-item.list:last-child {
 .hero {
     color: var(--accent-white-color);
     background-color: var(--footer-bg);
-    font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
-    letter-spacing: 0.06em;
     text-align: center;
     text-transform: uppercase;
     padding: 200px 0;
 }
 
 .hero h1 {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
     margin-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
